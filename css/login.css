@@ -1,0 +1,136 @@
+body {
+    height: 100vh;
+    color: white;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 10px 1fr 1fr;
+    gap: 108px;
+}
+
+.line {
+    background-color: rgb(163, 2, 163);
+}
+
+.content {
+    display: grid;
+    place-content: center;
+}
+
+.content .fristTitle {
+    font-weight: 400;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.content .fristTitle span {
+    background-color: rgb(163, 2, 163);
+    padding: 9px 12px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.content .x_line {
+    width: 106px;
+    height: 1px;
+    background-color: white;
+    margin: 93px 0;
+}
+
+.content .lastTitle {
+    font-weight: 900;
+    font-size: 65px;
+    letter-spacing: 2px;
+}
+
+.content>p {
+    font-size: 20px;
+    color: #56555b;
+    margin-top: 20px;
+}
+
+.content form {
+    width: 450px;
+    background: #212026;
+    border-radius: 10px;
+    padding: 70px 70px 10px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.content form h1 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.content form .inputBox {
+    width: 100%;
+    position: relative;
+    /* display: flex; */
+}
+
+.content form .inputBox img:first-child {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content form .inputBox .eye,
+.content form .inputBox .eye_slash {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.content form .inputBox input {
+    width: 100%;
+    border: 1px solid #131216;
+    padding: 18px 22px 18px 67px;
+    background-color: #131216;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.content form .inputBox input::placeholder {
+    color: #56555b;
+}
+
+.content .checkBox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.content .checkBox label {
+    color: #b757e4;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.content .checkBox input {
+    cursor: pointer;
+}
+
+.content form input[type="submit"] {
+    padding: 18px;
+    border-radius: 5px;
+    border: none;
+    background: #b757e4;
+    text-transform: uppercase;
+    color: white;
+}
+
+.content form input[type="password"] {
+    padding: 18px 67px;
+}
+
+.content .inputBox img {
+    width: 25px;
+}

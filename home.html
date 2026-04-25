@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./assets/icons/logo.svg" alt="">
+        <div class="innerHead">
+            <div class="inputBox">
+                <img src="./assets/icons/search.svg" alt="">
+                <input type="text" name="" placeholder="Search..">
+            </div>
+
+            <div class="profil">
+                <img src="./assets/icons/avatar.svg" alt="">
+                <span>X'eriya Ponald</span>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><img src="./assets/icons/dashboard.svg" alt="">
+                <span>Dashboard</span>
+            </li>
+            <li>
+                <img src="./assets/icons/product.svg" alt="">
+                <span>Products</span>
+            </li>
+            <li>
+                <img src="./assets/icons/Categories.svg" alt="">
+                <span>Categories</span>
+            </li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="titleWrapper">
+            <h1>Product</h1>
+            <button id="add"><img src="./assets/icons/plus.svg" alt="">Add product</button>
+        </div>
+    </main>
+
+    <div class="modal">
+        <div class="titleWrapper">
+            <p>Create a product</p>
+            <img id="closeIcon" src="./assets/icons/x-circle.svg" alt="">
+        </div>
+
+        <form id="form">
+            <div class="box">
+                <label>Full name</label>
+                <input type="text" placeholder="Ali Valiyev">
+            </div>
+
+            <div class="box">
+                <label>Phone number</label>
+                <input type="number" placeholder="997770707">
+            </div>
+            <div class="box">
+                <label>Brithday</label>
+                <input type="date" >
+            </div>
+            <div class="box">
+                <label>Address</label>
+                <select name="" id="">
+                    <option value="nam">Namangan</option>
+                    <option value="And">Andijon</option>
+                    <option value="Bux">Buxoro</option>
+                </select>
+            </div>
+            <div class="box">
+                <label>course</label>
+                <select name="" id="">
+                    <option value="web">Web developer</option>
+                    <option value="eng">English</option>
+                    <option value="des">Design</option>
+                    <option value="cybr">Cybr security</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <button id="close">CLose</button>
+                <button id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="blur"></div>
+
+    <script src="./js/hom.js"></script>
+</body>
+
+</html>
