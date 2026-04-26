@@ -221,3 +221,33 @@ button:active{
     border:  1px solid #1e5eff;
     color: #1856f4;
 }
+main table {
+    width: 100%;
+    border-collapse:  collapse;
+    border: 1px solid #D7DBEC;
+}
+
+ main table td{
+    padding: 7px 0 7px 20px;
+}
+
+main table th{
+    padding: 7px 0;
+}
+
+main .tableWrapper {
+    margin-top: 35px;
+    border-radius: 12px;
+    height: 95%;
+    padding: 37px 28px;
+    background: #fff;
+}
+
+main table tr td:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-collapse:  collapse;
+    border: 1px solid #D7DBEC;
+    cursor: pointer;
+}
