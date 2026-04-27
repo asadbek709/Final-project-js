@@ -61,7 +61,6 @@ function createdUI(arr) {
             let id = e.target.getAttribute("del_id")
            fetch(`https://692ad71d7615a15ff24dd733.mockapi.io/api/v1/product/${id}`, {
             method: "DELETE",
-
            }).then((res)=> {
              if (res.status >= 200 && res.status < 300) {
                 alert("Malumot to'g'ri o'chirildi ✅")
@@ -97,8 +96,6 @@ function closeAction() {
     fullName.value = "";
     phoneNumber.value = "";
     brithday.value = "";
-    address.value = "";
-    course.value = "";
 }
 
 Close.addEventListener("click", closeAction)
@@ -117,12 +114,13 @@ submit.addEventListener("click", function () {
         fetch("https://692ad71d7615a15ff24dd733.mockapi.io/api/v1/product", {
             method: "POST",
             headers: {
-                "Content-Type": "aplication/json",
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(obj)
         }).then((res) => {
             if (res.status >= 200 && res.status < 300) {
                 closeAction()
+                getData()
                 alert("Malumot to'g'ri saqlandi ✅")
             }
         }).catch((error) => {
