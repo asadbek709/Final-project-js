@@ -65,10 +65,10 @@ nav ul {
     list-style-type: none;
 }
 
-nav ul li:first-child{
+nav ul li:first-child {
     background: #1e5eff;
     color: white;
-    
+
 }
 
 nav ul li {
@@ -94,22 +94,24 @@ nav ul li span {
 
 }
 
-main{
+main {
     background-color: #F5F6FA;
-    padding: 28px 40px;
-}
-main .titleWrapper {
-    display: flex;
-    align-items: center;justify-content: space-between;
+    padding: 10px 15px;
 }
 
-main .titleWrapper h1{
+main .titleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .titleWrapper h1 {
     font-size: 24px;
     color: #131523;
     font-weight: 700;
 }
 
-button{
+button {
     padding: 13px 25px;
     border-radius: 4px;
     background: #1e5eff;
@@ -120,14 +122,14 @@ button{
     justify-content: center;
     gap: 9px;
     cursor: pointer;
-    
+
 }
 
-button:hover{
+button:hover {
     background: rgb(24, 84, 237);
 }
 
-button:active{
+button:active {
     background: #1e5eff;
 }
 
@@ -137,7 +139,6 @@ button:active{
     border-radius: 12px;
     background-color: white;
     padding: 24px 28px;
-    border: 1px solid red;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -145,14 +146,14 @@ button:active{
     z-index: 10;
 }
 
-.blur{
+.blur {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .modal .titleWrapper {
@@ -162,17 +163,17 @@ button:active{
     margin-bottom: 28px;
 }
 
-.modal .titleWrapper p{
+.modal .titleWrapper p {
     font-size: 20px;
     font-weight: 300;
 
 }
 
-.modal .titleWrapper img{
+.modal .titleWrapper img {
     cursor: pointer;
 }
 
-.modal form{
+.modal form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,7 +181,7 @@ button:active{
     gap: 16px;
 }
 
-.modal form .box{
+.modal form .box {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -188,66 +189,95 @@ button:active{
     gap: 4px;
 }
 
-.modal form .box label{
+.modal form .box label {
     font-size: 13px;
     color: #151515;
     font-weight: 400;
 }
 
 .modal form .box input,
-.modal form .box select{
+.modal form .box select {
     padding: 8px 16px;
     border: 1px solid #d1d1d1;
     border-radius: 5px;
     font-size: 13px;
 }
 
-.modal form .box input::placeholder{
+.modal form .box input::placeholder {
     color: #7b7b7f;
     font-weight: 200;
 }
 
-.modal form .box:last-child{
+.modal form .box:last-child {
     flex-direction: row;
     gap: 12px;
 }
 
-.modal form .box:last-child button{
+.modal form .box:last-child button {
     width: 100%;
 }
 
-.modal form .box:last-child button:first-child{
+.modal form .box:last-child button:first-child {
     background-color: white;
-    border:  1px solid #1e5eff;
+    border: 1px solid #1e5eff;
     color: #1856f4;
 }
+
 main table {
     width: 100%;
-    border-collapse:  collapse;
-    border: 1px solid #D7DBEC;
+    border-collapse: collapse;
 }
 
- main table td{
+main table td {
     padding: 7px 0 7px 20px;
 }
 
-main table th{
-    padding: 7px 0;
+main table th {
+    padding: 7px 20px;
+    text-align: start;
 }
+
+main table .tr {
+    background: #1856f4;
+    color: white;
+}
+
+main table tr:nth-child(even){
+    /* background: #eceaf7; */
+    background: #f0effb;
+
+}
+
 
 main .tableWrapper {
-    margin-top: 35px;
+    margin-top: 15px;
     border-radius: 12px;
-    height: 95%;
+    height: 87%;
     padding: 37px 28px;
     background: #fff;
+    overflow-y: scroll;
 }
 
-main table tr td:last-child{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-collapse:  collapse;
-    border: 1px solid #D7DBEC;
+main table tr td:nth-child(7),
+main table tr td:last-child  {
+    text-align: center;
     cursor: pointer;
+    padding: 0;
+}
+
+.filtered {
+    display: flex;
+    gap: 20px;
+}
+
+.filtered select {
+    width: 150px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 2px solid #1e5eff;
+}
+
+.edit_icon {
+    width: 30px;
+    border-radius: 50%;
 }

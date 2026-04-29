@@ -15,7 +15,7 @@
         <div class="innerHead">
             <div class="inputBox">
                 <img src="./assets/icons/search.svg" alt="">
-                <input type="text" name="" placeholder="Search..">
+                <input id="search" type="search" name="" placeholder="Search..">
             </div>
 
             <div class="profil">
@@ -44,20 +44,32 @@
     <main>
         <div class="titleWrapper">
             <h1>Product</h1>
-            <button id="add"><img src="./assets/icons/plus.svg" alt="">Add product</button>
+            <div class="filtered">
+                <select id="filter">
+                    <option value="id" selected >Id</option>
+                    <option value="full_name">full Name</option>
+                    <option value="phone_number">Phone number</option>
+                    <option value="date">Brithday</option>
+                    <option value="address">Address</option>
+                    <option value="course">Course</option>
+
+                </select>
+                <button id="add"><img src="./assets/icons/plus.svg" alt="">Add Products</button>
+            </div>
         </div>
 
         <div class="tableWrapper">
-            <table border>
+            <table >
                 <thead>
-                    <tr>
+                    <tr class="tr" >
                         <th>ID</th>
-                        <th>Ism Familya</th>
+                        <th>Ism familya</th>
                         <th>Telefon raqam</th>
                         <th>Tug'ilgan sana</th>
-                        <th>manzil</th>
+                        <th>Manzil</th>
                         <th>Kurs yonalishi</th>
                         <th>O'chirish</th>
+                        <th>Taxrirlash</th>
                     </tr>
                 </thead>
                 <tbody id="tbody"></tbody>
@@ -88,7 +100,7 @@
             <div class="box">
                 <label>Address</label>
                 <select class="address">
-                    <option selected value="Namanganam">Namangan</option>
+                    <option selected value="Namangan">Namangan</option>
                     <option value="Andijon">Andijon</option>
                     <option value="Buxoro">Buxoro</option>
                 </select>
@@ -99,7 +111,7 @@
                     <option selected value="Web developer">Web developer</option>
                     <option value="English">English</option>
                     <option value="Design">Design</option>
-                    <option value="cyCybr securitybr">Cybr security</option>
+                    <option value="Cybr securitybr">Cybr security</option>
                 </select>
             </div>
 
