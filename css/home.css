@@ -52,6 +52,13 @@ header .innerHead .profil {
     gap: 12px;
 }
 
+header .innerHead .profil img {
+    width: 50px;
+    
+    border-radius: 50%;
+}
+ 
+
 nav {
     border-right: 2px solid #bebebe;
     background-color: #F5F6FA;
@@ -221,6 +228,7 @@ button:active {
     background-color: white;
     border: 1px solid #1e5eff;
     color: #1856f4;
+
 }
 
 main table {
@@ -260,8 +268,8 @@ main .tableWrapper {
     overflow-y: scroll;
 }
 
-main table tr del_btn:nth-child(7),
-main table tr edit_btn:last-child {
+main table th:nth-child(7),
+main table th:last-child {
     text-align: center;
     cursor: pointer;
     padding: 0;
@@ -281,6 +289,7 @@ main table tr edit_btn:last-child {
     gap: 9px;
     cursor: pointer;
     border: 2px solid #D7DBEC;
+    padding-left: 7px;
 }
 
 .del_btn {
@@ -332,4 +341,20 @@ td{
     font-size: 15px;
     font-weight: 200;
     font-style: italic;
+}
+
+
+main table .del {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 40px; */
+    cursor: pointer;
+}
+
+main table .edit{
+    align-items: center; 
+     justify-content: center; 
+     padding-left: 40px;
+    cursor: pointer;
 }

@@ -146,7 +146,7 @@ submit.addEventListener("click", function () {
         course: course.value,
     }
 
-    if (Object.values(obj).length === 5) {
+    if (Object.values(obj).every((a)=> a.trim() !== "") ) {
         fetch(edit_id ? `https://692ad71d7615a15ff24dd733.mockapi.io/api/v1/product/${edit_id}` : "https://692ad71d7615a15ff24dd733.mockapi.io/api/v1/product", {
             method: edit_id ? "PUT" : "POST",
             headers: {
