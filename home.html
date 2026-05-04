@@ -15,7 +15,7 @@
         <div class="innerHead">
             <div class="inputBox">
                 <img src="./assets/icons/search.svg" alt="">
-                <input id="search" type="search" name="" placeholder="Search..">
+                <input id="search" type="search" name="" placeholder="Search..." autocomplete="off">
             </div>
 
             <div class="profil">
@@ -46,8 +46,8 @@
             <h1>Product</h1>
             <div class="filtered">
                 <select id="filter">
-                    <option value="id" selected >Id</option>
-                    <option value="full_name">full Name</option>
+                    <option value="id" selected >ID</option>
+                    <option value="Full_name">Full name</option>
                     <option value="phone_number">Phone number</option>
                     <option value="date">Brithday</option>
                     <option value="address">Address</option>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="tableWrapper">
-            <table >
+            <table  >
                 <thead>
                     <tr class="tr" >
                         <th>ID</th>
@@ -77,13 +77,15 @@
         </div>
     </main>
 
+ 
+
     <div class="modal">
         <div class="titleWrapper">
             <p>Create a product</p>
             <img id="closeIcon" src="./assets/icons/x-circle.svg" alt="">
         </div>
 
-        <form id="form">
+        <div class="form">
             <div class="box">
                 <label>Full name</label>
                 <input class="fUllName" type="text" placeholder="Ali Valiyev">
@@ -119,7 +121,7 @@
                 <button id="close">CLose</button>
                 <button id="submit">Submit</button>
             </div>
-        </form>
+        </div>
     </div>
 
     <div class="blur"></div>

@@ -47,13 +47,13 @@ function createdUI(arr) {
 
 
         let td_del = document.createElement("td")
-        td_del.textContent = "❌"
+        td_del.innerHTML = `<button class="del_btn" id="add">Delete <img src="./assets/icons/trash-can-solid-full.svg" alt=""> </button>`
         td_del.setAttribute("class", "del")
         td_del.setAttribute("del_id", obj.id)
         tr.append(td_del)
 
         let td_edit = document.createElement("td")
-        td_edit.innerHTML = `<img class ="edit_icon" src="./edit_icon.png" alt="">`
+        td_edit.innerHTML = `<button class="edit_btn" id="add">Edit<img src="./assets/icons/pen-to-square-solid-full.svg" alt="">    </button>`
         td_edit.setAttribute("class", "edit")
         td_edit.setAttribute("edit_id", obj.id)
         tr.append(td_edit)
@@ -65,7 +65,7 @@ function createdUI(arr) {
 
     Array.from(td_del).forEach((td) => {
         td.addEventListener("click", function (e) {
-            let id = e.target.getAttribute("del_id")
+            let id = e.target.parentElement.getAttribute("del_id")
             fetch(`https://692ad71d7615a15ff24dd733.mockapi.io/api/v1/product/${id}`, {
                 method: "DELETE",
             }).then((res) => {
@@ -181,9 +181,9 @@ add.addEventListener("click", function () {
     submit.removeAttribute("edit_id")
 })
 
-form.addEventListener("click", function (e) {
-    e.preventDefault()
-})
+// form.addEventListener("click", function (e) {
+//     e.preventDefault()
+// })
 
 let filter = document.querySelector("#filter")
 filter.addEventListener("change", function (e) {
@@ -196,11 +196,12 @@ filter.addEventListener("change", function (e) {
         })
 })
 
+
 search.addEventListener("change", function () {
     fetch("https://692ad71d7615a15ff24dd733.mockapi.io/api/v1/product")
         .then((res) => res.json())
         .then((res) => {
-            let newRes = res.filter((obj)=>obj.full_name.includes(this.value))
+            let newRes = res.filter((obj)=>obj.full_name.toLowerCase().includes(this.value.toLowerCase()));
             createdUI(newRes)
         })
 })
