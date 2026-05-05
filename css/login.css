@@ -55,7 +55,7 @@ body {
     width: 450px;
     background: #212026;
     border-radius: 10px;
-    padding: 70px 70px 10px 70px;
+    padding: 70px 60px;
     display: flex;
     flex-direction: column;
     gap: 30px;

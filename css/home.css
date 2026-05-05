@@ -72,7 +72,7 @@ nav ul {
     list-style-type: none;
 }
 
-nav ul li:first-child {
+nav ul li:first-child { 
     background: #1e5eff;
     color: white;
 
