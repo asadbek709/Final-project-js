@@ -47,13 +47,13 @@ function createdUI(arr) {
 
 
         let td_del = document.createElement("td")
-        td_del.innerHTML = `<button class="del_btn" id="add">Delete <img src="./assets/icons/trash-can-solid-full.svg" alt=""> </button>`
+        td_del.innerHTML = `<button class="del_btn" id="add"><img src="./assets/icons/trash-can-solid-full.svg" alt=""></button>`
         td_del.setAttribute("class", "del")
         td_del.setAttribute("del_id", obj.id)
         tr.append(td_del)
 
         let td_edit = document.createElement("td")
-        td_edit.innerHTML = `<button class="edit_btn" id="add">Edit<img src="./assets/icons/pen-to-square-solid-full.svg" alt="">    </button>`
+        td_edit.innerHTML = `<button class="edit_btn" id="add"><img src="./assets/icons/pen-to-square-solid-full.svg" alt=""></button>`
         td_edit.setAttribute("class", "edit")
         td_edit.setAttribute("edit_id", obj.id)
         tr.append(td_edit)
@@ -188,6 +188,8 @@ add.addEventListener("click", function () {
 let filter = document.querySelector("#filter")
 filter.addEventListener("change", function (e) {
     let value = e.target.value;
+    console.log(value);
+    
     fetch("https://692ad71d7615a15ff24dd733.mockapi.io/api/v1/product")
         .then((res) => res.json())
         .then((res) => {
@@ -201,7 +203,7 @@ search.addEventListener("change", function () {
     fetch("https://692ad71d7615a15ff24dd733.mockapi.io/api/v1/product")
         .then((res) => res.json())
         .then((res) => {
-            let newRes = res.filter((obj)=>obj.full_name.toLowerCase().includes(this.value.toLowerCase()));
+            let newRes = res.filter((obj)=>obj.toLowerCase().includes(this.value.toLowerCase()));
             createdUI(newRes)
         })
 })
